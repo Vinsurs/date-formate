@@ -1,8 +1,8 @@
 {
   "name": "date-formately",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Date formatting library,supports browser and nodejs",
-  "main": "dist/date-formate.js",
+  "main": "dist/date-formately.js",
   "private": false,
   "scripts": {
     "build": "webpack"
@@ -23,6 +23,7 @@
     "date",
     "date-format",
     "date-formate",
+    "date-formately",
     "time",
     "datetime",
     "date-fn",
