@@ -1,6 +1,6 @@
-# date-formate
+# date-formately
 
-`date-formate` is a JavaScript library for date formatting,supports **brower** and **[node.js](https://nodejs.org/en)**.
+`date-formately` is a JavaScript library for date formatting,supports **brower** and **[node.js](https://nodejs.org/en)**.
 
 # Features
 
@@ -16,24 +16,24 @@
 `npm`:
 
 ```js
- npm install date-formate --save
+ npm install date-formately --save
 ```
 
 `bower`:
 
 ```js
- bower install date-formate --save
+ bower install date-formately --save
 ```
 
 `yarn`:
 
 ```js
- yarn add date-formate
+ yarn add date-formately
 ```
 
 # Usage
 
-'date-formate' supports **Commonjs**, **AMD** and **Browser**. You can use it according to different environments.
+'date-formately' supports **Commonjs**, **AMD** and **Browser**. You can use it according to different environments.
 
 ### Commonjs
 
@@ -42,7 +42,7 @@
     - The easiest way to use it is:
 
       ```js
-      const formate = require("date-formate");
+      const formate = require("date-formately");
       console.log(formate()); // output is "2018-12-20 16:25:55",depends on current date
       // alias to `formate`
       console.log(formate.format()); // output is "2018-12-20 16:25:55",depends on current date
@@ -51,7 +51,7 @@
     - Customized use:
 
       ```js
-      const formate = require("date-formate");
+      const formate = require("date-formately");
       console.log(formate("YYYY/MM/DD HH:II:SS aa", new Date(2018, 12, 20))); // output is "2018/12/20 00:00:00 am"
       console.log(formate("YY/mm/dd hh:ii:ss  WW")); // output is "19/12/25 23:23:59  Wednesday"
       // Customize the display text for months and weeks
@@ -82,7 +82,7 @@
 2.  Resolve relative date
 
 ```js
-const formate = require("date-formate");
+const formate = require("date-formately");
 console.log(formate.resolve("+3days4hours")); // output is "2019-12-20 20:25:55"
 console.log(formate.resolve("-3years2weeks","YYYY/MM/DD HH:II:SS aa")); // output is "2016/12/20 16:25:55 pm"
 console.log(formate.resolve("lastweek")); // output is "2019-12-13 16:25:55"
@@ -95,7 +95,7 @@ console.log(formate.relative(timestamp)));// output is "2 minutes ago"
 3.  Compare date
 
 ```js
-const formate = require("date-formate");
+const formate = require("date-formately");
 console.log(formate.isBefore(new Date(2017, 8, 24))); // output is "true"
 console.log(formate.isAfter(new Date(2017, 8, 24), new Date())); // output is "false"
 console.log(formate.isLeapYear(2082)); // output is "false"
@@ -116,7 +116,7 @@ The easiest way to use it in a browser is to introduce script tags, this exposes
     <meta charset="UTF-8" />
   </head>
   <body>
-    <script src="./node_modules/dist/date-formate.js"></script>
+    <script src="./node_modules/dist/date-formately.js"></script>
     <script>
       // window.formate is the date formator
       let date = window.formate.resolve("tomorrow", false); // return a native Date Object
@@ -129,17 +129,17 @@ The easiest way to use it in a browser is to introduce script tags, this exposes
 
 ### Other
 
-If you want to use `date-formate` in other packaging based engineering projects, it's very simple. Just import it and use it
+If you want to use `date-formately` in other packaging based engineering projects, it's very simple. Just import it and use it
 
 ```js
-import formate from "date-formate";
+import formate from "date-formately";
 let sDate = formate.format();
 // ...
 ```
 
 # Api
 
-Let's call the date format object exposed by [date-formate](https://www.npmjs.com/package/date-formate) `formate`, and then
+Let's call the date format object exposed by [date-formately](https://www.npmjs.com/package/date-formately) `formate`, and then
 
 #### <span id= "formate">formate(format?:String, time?:Date|Timestamp = new Date(),options?:{months?:String[],weeks?:String[]}={}):String</span>
 
@@ -157,7 +157,7 @@ Let's call the date format object exposed by [date-formate](https://www.npmjs.co
 
 The following table is <span id="format">**supported format symbols:**</span>
 
-> **Note**:Sometimes the normal text we display may contain `date-formate` predefined format characters. At this time, `date-formate` will also convert these characters, which may not be what we want. So in order to ensure that predefined format characters do not conflict with ordinary text characters, our built-in predefined format characters are composed of two characters,as listed in the table below：
+> **Note**:Sometimes the normal text we display may contain `date-formately` predefined format characters. At this time, `date-formately` will also convert these characters, which may not be what we want. So in order to ensure that predefined format characters do not conflict with ordinary text characters, our built-in predefined format characters are composed of two characters,as listed in the table below：
 
 | symbol | description                                                                                         |
 | ------ | --------------------------------------------------------------------------------------------------- |
@@ -273,4 +273,4 @@ supported tokens are: `year(s)`, `month(s)`, `day(s)`, `week(s)` ,`hour(s)`, `mi
 
 # Parsing strings to Date
 
-Considering that parsing date format strings into date objects is only a small requirement and easy to implement,the `date-formate` library does **not support** this function, but if you're looking for anything more sophisticated than that you should probably look for a better library ([momentjs](https://momentjs.com) does pretty much everything).
+Considering that parsing date format strings into date objects is only a small requirement and easy to implement,the `date-formately` library does **not support** this function, but if you're looking for anything more sophisticated than that you should probably look for a better library ([momentjs](https://momentjs.com) does pretty much everything).

@@ -4,7 +4,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: pathLib.resolve(__dirname, "dist"),
-    filename: "date-formate.js",
+    filename: "date-formately.js",
     library: "formate",
     globalObject: "this",
     libraryTarget: "umd"
