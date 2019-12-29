@@ -1,4 +1,4 @@
-// const formate = require("../dist/date-fm");
+// const formate = require("../dist/date-formately");
 const formate = require("../src/index");
 console.log(formate.resolve("+3years"));
 console.log(formate.resolve("-3years2weeks"));
