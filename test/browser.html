@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../dist/date-fm.js"></script>
+    <script>
+      console.log(dateFm.resolve("+3years"));
+      console.log(dateFm.resolve("-3years2weeks"));
+      console.log(dateFm.relative(new Date(2017, 8, 24)));
+      console.log(dateFm.isBefore(new Date(2017, 8, 24)));
+      console.log(dateFm.isLeapYear(2082));
+      console.log(dateFm.compare(new Date(2017, 8, 24), new Date(2018, 8, 24)));
+      console.log(dateFm("YY/mm/dd hh:ii:ss A"));
+    </script>
+  </body>
+</html>
